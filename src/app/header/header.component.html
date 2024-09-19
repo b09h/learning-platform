@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Logo and Name -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/images/logo.jpeg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <span>Calculator</span>
+      </a>
+  
+      <!-- Toggler for Mobile View -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links and Items -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Calculators
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/calculators/sip">SIP Calculator</a></li>
+              <li><a class="dropdown-item" routerLink="/calculators/ppf">PPF Calculator</a></li>
+              <li><a class="dropdown-item" routerLink="/calculators/margin">Margin Calculator</a></li>
+              <li><a class="dropdown-item" routerLink="/calculators/swp">SWP Calculator</a></li>
+              <li><a class="dropdown-item" routerLink="/calculators/fd">FD Calculator</a></li>
+              <li><a class="dropdown-item" routerLink="/calculators/rd">RD Calculator</a></li>
+              <li><a class="dropdown-item" routerLink="/calculators/emi">EMI Calculator</a></li>
+              <li><a class="dropdown-item" routerLink="/calculators/nps">NPS Calculator</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact-us">Contact Us</a>
+          </li>
+        </ul>
+  
+        <!-- Search bar and login/logout button -->
+        <div class="d-flex align-items-center">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" *ngIf="!loggedIn" (click)="login()">Login</button>
+          <button class="btn btn-danger" *ngIf="loggedIn" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

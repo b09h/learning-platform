@@ -1,0 +1,13 @@
+<div class="slider-container">
+    <label *ngIf="label">{{ label }}</label>
+    <input type="range" 
+           [min]="min" 
+           [max]="max" 
+           [step]="step" 
+           [(ngModel)]="value" 
+           class="slider  cursor-p">
+    <div *ngIf="showTicks" class="ticks-container">
+      <span *ngFor="let tick of ticks" class="tick">{{ tick }}</span>
+    </div>
+  </div>
+  

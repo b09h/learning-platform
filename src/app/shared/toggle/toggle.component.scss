@@ -1,0 +1,51 @@
+/* Base styling for the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Adjust the width as needed */
+    height: 34px; /* Adjust the height as needed */
+  }
+  
+  /* Hide the default checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Style the slider (toggle) */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px; /* Make the slider rounded */
+    transition: .4s;
+  }
+  
+  /* Circle inside the slider */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; /* Adjust the height as needed */
+    width: 26px; /* Adjust the width as needed */
+    border-radius: 50%; /* Make the circle inside rounded */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  /* Change background color when the switch is checked */
+  input:checked + .slider {
+    background-color: #2196F3; /* Change to desired color */
+  }
+  
+  /* Move the circle inside the slider when checked */
+  input:checked + .slider:before {
+    transform: translateX(26px); /* Adjust based on the width of the slider */
+  }
+  

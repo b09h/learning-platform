@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.cursor-p {
+    cursor: pointer;
+}
+
+.container {
+    min-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+app-echarts {
+    display: flex;
+    height: 100%;
+}

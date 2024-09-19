@@ -1,0 +1,14 @@
+<div class="container row m-0">
+    <div class="col-12 col-md-6 mb-4">
+        <!-- Slider Component -->
+        <app-slider [min]="0" [max]="100" [step]="10" [value]="50" [showTicks]="true"
+            [ticks]="[0, 20, 40, 60, 80, 100]"></app-slider>
+
+        <!-- Toggle Component -->
+        <app-toggle [isChecked]="true" (toggleChange)="onToggle($event)"></app-toggle>
+    </div>
+    <div class="col-12 col-md-6 mb-4">
+        <!-- ECharts Component -->
+        <app-echarts [options]="chartOptions"></app-echarts>
+    </div>
+</div>
